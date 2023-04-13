@@ -1,13 +1,9 @@
 const { Router } = require('express')
 
+const {createCart}= require('./controllers')
+
 const routes = Router()
 
-routes.get('/hello', (request, response) => { 
-   return response.json({ msg: 'hello world' })
-})
-
-routes.get('/hello2', (request, response) => {
-   return response.json({ msg: 'hello world 2'})
-})
+routes.post('/Cart', createCart)
 
 module.exports = routes
